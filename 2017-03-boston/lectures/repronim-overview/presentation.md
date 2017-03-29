@@ -7,9 +7,9 @@ class: center, middle, inverse
 ---
 Many thanks to the ReproNIm team
 
-[source](https://github.com/smpadhy/repronim-ppt/tree/gh-pages) | CC-BY
+[source](https://github.com/smpadhy/repronim-ppt/tree/gh-pages)
 
-(You can update this presentation - just send a pull-request)
+
 
 Acknowledgement - NIH funding
 ---
@@ -18,7 +18,7 @@ layout: false
 
 - Reproducible Research
 
-  - Definition
+  - Definitions
 
   - Approaches so far
 
@@ -41,14 +41,14 @@ layout: false
 ### Reproducible Research
 - Original Experiment: Data  +  Analysis  =  Result
 
-- Provenance critical for reproducibility
+- Provenance is critical for reproducibility
 
 --
 
 - **Re-executability (Publication-level Replication)**
 
     - Exact Same Data + Exact Same Analysis should yield the Exact Same Result
-    -
+
     - Problem since current publications do not actually provide complete specification
 
 ---
@@ -70,57 +70,62 @@ layout: false
 ???
 Notes:
 
-
 ---
-### Issues that affect Reproducibility
-- Low power
-- Mistakes
-- Ineffective Data Sharing
-- Methodological Variance
-- Sampling
-- P – hacking (P-phishing)
-- Publication Bias
-- Only reporting potentially significant results, and not the rest
-
-???
-Not sure of this slide
----
-
 ### Approaches so far
 
-- Data sharing through different infrastructure
-
-- Execution environment through Containers/Virtual Machines
-
-- Saving and sharing workflows
-
-- Data models and Provenance tracking
+- Collaboration and Data sharing
+    - git
+    - git annex
+    - datalad
+    - NITRC
 
 --
 
-Requires an *end-to-end* reproducible analysis framework that ‘bundles’
+- Execution environment through Containers/Virtual Machine
+    - Docker
+    - Singularity
 
-    - complete study data
+--
+-  Workflows
+    - nipype
+    - Common Workflow Language
+    - reprozip
 
-    - processing workflow
+--
 
-    - execution environment
+- Data models and Provenance tracking
+  - NeuroImaging Data Model (NIDM)
 
-    - statistical analysis and interpretations that arise from an analysis
+---
+### Requirement
+
+There is a requirement for an *end-to-end* reproducible analysis framework that ‘bundles’
+
+- complete study data
+
+-  processing workflow
+
+- execution environment
+
+- statistical analysis and interpretations that arise from an analysis
 
 
 ???
 Building blocks for such frameworks exist due to previous NIH efforts
+
 ---
 
-### ReproNIm - Overview
-- Center for Reproducible Neuroimagimg Computation
+### ReproNim: A Center for Reproducible Neuroimaging Computation
 
-- “(Discover, Replicate, Innovate)^Repeat"
+“(Discover, Replicate, Innovate)^Repeat"
 
-- Team science approach to implementing the link between (neuroimaging data, analysis and results)
+Aims to develop and implement of suit of technologies that will support a comprehensive set of data management, analysis and utilization frameworks in support of both basic research and clinical activities
 
-- Builds  end-to-end reproducible analysis framework and provides software stack toward achieving this
+- link between (neuroimaging data, analysis and results)
+
+- improve reproducibility of neuroimaging research
+
+*It will be an end-to-end reproducible analysis framework!*
 
 ---
 ### Resource Discovery
@@ -198,7 +203,7 @@ Notes:
 ---
 ### Data Model, Provenance and Integration
 **Requirement**
-- Provide a consistent and extensible data model for communicating information in brain imaging, associated software tools, and to provide a set of commonly used reproducible workflows with integrated provenance tracking
+- To provide a consistent and extensible data model for communicating information in brain imaging, associated software tools, and to provide a set of commonly used reproducible workflows with integrated provenance tracking
 
 ---
 
@@ -225,6 +230,7 @@ notes
 
 ---
 ### **BrainVerse**
+
 - Electronic Laboratory Notebook - As a desktop app for reproducible neuroimaging research
 
 - Allows neuroimaging research to be carried out collaboratively
@@ -262,15 +268,15 @@ NeuroImaging Computational Environments MANager (**“NICEMAN”**)
 
 --
 
-It **supports**:
+It will **support**:
 - easy and reproducible execution of neuroimaging analysis workflows
 - various computational platforms
 - efficient reuse and integration of existing free and open-source software products
-- provides data sharing initiatives
+- data distribution
 
 ---
 
-**Executes** the workflow by:
+It will **Execute** the workflow by:
 - automatically creating computation environments where necessary
 - making sure software and datasets are available
 - executing the workflow(s)
@@ -279,7 +285,7 @@ about the environment back
 
 --
 
-*Simplifies creation and management of computing environments in Neuroimaging!*
+*It will simplify creation and management of computing environments in Neuroimaging!*
 
 ???
 Notes:
@@ -293,6 +299,9 @@ Notes
 - (TRD2)
 - (TRD3)
 ---
+### Training
+---
+
 ### Example
 
 
