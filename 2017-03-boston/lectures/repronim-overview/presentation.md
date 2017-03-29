@@ -71,6 +71,19 @@ layout: false
 Notes:
 
 ---
+### Information Needs to be Captured
+
+- Data
+- Parameters
+- Environment
+    - Hardware
+    - Operating system
+    - Software/libraries
+- Code
+- Output
+- Requirements
+
+---
 ### Approaches so far
 
 - Collaboration and Data sharing
@@ -119,7 +132,7 @@ Building blocks for such frameworks exist due to previous NIH efforts
 
 “(Discover, Replicate, Innovate)^Repeat"
 
-Aims to develop and implement of suit of technologies that will support a comprehensive set of data management, analysis and utilization frameworks in support of both basic research and clinical activities
+**Objective** is to develop and implement of suit of technologies that will support a comprehensive set of data management, analysis and utilization frameworks in support of both basic research and clinical activities
 
 - link between (neuroimaging data, analysis and results)
 
@@ -128,6 +141,18 @@ Aims to develop and implement of suit of technologies that will support a compre
 *It will be an end-to-end reproducible analysis framework!*
 
 ---
+### ReproNIm Components
+
+- Resource Discovery
+
+- Data Models, Provenance and Integration
+
+- Execution Environments
+
+- Training
+
+---
+
 ### Resource Discovery
 - Key aspects of repeatable science - ability to **share** and **locate** data and software
 
@@ -259,7 +284,7 @@ reconstructed later on), and controlled (e.g., the environment is tested).
 
 --
 
-**Requires**:
+**Requirement**:
 Full automation and tracking of computing environments
 
 --
@@ -276,7 +301,7 @@ It will **support**:
 
 ---
 
-It will **Execute** the workflow by:
+It will **execute** the workflow by:
 - automatically creating computation environments where necessary
 - making sure software and datasets are available
 - executing the workflow(s)
@@ -300,14 +325,39 @@ Notes
 - (TRD3)
 ---
 ### Training
+
+ **Objectives**:
+
+ - To provide the brain imaging community with online training materials based on the concepts and software developed by the center.
+
+- To conduct training workshops to teach the fundamentals of reproducible neuroimaging and to use center resources and tools
+effectively.
+
+- To cultivate a clear understanding of the concepts, assumptions, and limitations underlying the reproducible research automation tools.
+
+---
+### Training - Approach
+
+- Online materials being developed reuses already existing materials and new ones are created wherever required.
+
+- Existing materials are being reviewed before adding to the online traning resources
+
+- Training modules are shared through github
+
+- Assesments/Assignments are being designed for a user taking the online materials
+
+- Training Modules can be found here in [gitHub](https://github.com/ReproNim) or on [here](http://www.reproducibleimaging.org/module-reproducible-basics/)
+
+
 ---
 
 ### Example
-
+Simple Workflow demo maybe ?
 
 ---
 ### Summary
 
+WIP
 Use your tools how you want, but make the results reproducible, open and persistent with ReproNIm: “(Discover, Replicate, Innovate)^Repeat”!
 ---
 class: center, middle
