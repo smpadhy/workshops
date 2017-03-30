@@ -3,15 +3,17 @@ layout: true
 class: center, middle, inverse
 ---
 # Reproducible Research using ReproNIm
+### Smruti Padhy, PhD
+### Massachusetts Institute of Technology
 ### smruti@mit.edu
 ---
 Many thanks to the ReproNIm team
 
-[source](https://github.com/smpadhy/repronim-ppt/tree/gh-pages)
-
+[source](https://github.com/smpadhy/workshops/tree/gh-pages/2017-03-boston/lectures/repronim-overview)
 
 
 Acknowledgement - NIH funding
+
 ---
 layout: false
 ### Outline
@@ -22,7 +24,7 @@ layout: false
 
   - Approaches so far
 
-- ReproNIm
+- ReproNIm - Overview
 
     - Project Goal
 
@@ -32,7 +34,7 @@ layout: false
 
     - Execution Environments
 
-- Example
+    - Training
 
 - Summary
 
@@ -41,15 +43,21 @@ layout: false
 ### Reproducible Research
 - Original Experiment: Data  +  Analysis  =  Result
 
+- A Neuroimaging Workflow
+<img src="assets/ni-workflow.png" width="85%"/>
+
+
 - Provenance is critical for reproducibility
 
---
+---
+
+### Definitions
 
 - **Re-executability (Publication-level Replication)**
 
     - Exact Same Data + Exact Same Analysis should yield the Exact Same Result
 
-    - Problem since current publications do not actually provide complete specification
+    - Current publications do not actually provide complete specification
 
 ---
 ### Reproducible Research
@@ -57,13 +65,13 @@ layout: false
 
 --
 
-    - (v1) Exact Same Data + Nominally ‘Similar’ Analyses should yield a ‘Similar’ Result (i.e. FreeSurfer subcortical volumes compared to FSL FIRST)
+    - (v1) Exact Same Data + Nominally ‘Similar’ Analyses should yield a ‘Similar’ Result
 
-    - (v2) Nominally ‘Similar’ Data + Exact Same Analysis should yield a ‘Similar’ Result (e.g. my kids with autism compared to your kids with autism)
+    - (v2) Nominally ‘Similar’ Data + Exact Same Analysis should yield a ‘Similar’ Result
 
     -  Nominally ‘Similar’ Data + Nominally ‘Similar’ Analyses should yield a ‘Similar’ Result
 
-    - Huge problem since we dis-incentivize publication of replication studies as 'not novel’
+    - Dis-incentivize publication of replication studies as 'not novel’
 
     - With lack of precise characterization of data, analysis and results, ‘Similar’ has lots of wiggle room for interpretation (both to enhance similarity and discount differences)!
 
@@ -90,29 +98,36 @@ Notes:
     - git
     - git annex
     - datalad
-    - NITRC
+    - ...
 
---
-
-- Execution environment through Containers/Virtual Machine
+- Execution environment through Virtualization technology
+    - Virtual Machine
     - Docker
     - Singularity
 
---
--  Workflows
-    - nipype
-    - Common Workflow Language
+- Capturing execution environment
     - reprozip
 
---
-
-- Data models and Provenance tracking
-  - NeuroImaging Data Model (NIDM)
+-  Workflows
+    - nipype
+    - ...
 
 ---
-### Requirement
+### Approaches so far
 
-There is a requirement for an *end-to-end* reproducible analysis framework that ‘bundles’
+- Data models and Provenance tracking
+    - NeuroImaging Data Model (NIDM)
+    - ...
+
+- Specification
+    - BIDS
+    - Common Workflow Language
+    ...
+
+---
+### Motivation
+
+There is a need for an *end-to-end* reproducible analysis framework that ‘bundles’
 
 - complete study data
 
@@ -128,17 +143,24 @@ Building blocks for such frameworks exist due to previous NIH efforts
 
 ---
 
-### ReproNim: A Center for Reproducible Neuroimaging Computation
+### ReproNIm: A Center for Reproducible Neuroimaging Computation
 
 “(Discover, Replicate, Innovate)^Repeat"
 
-**Objective** is to develop and implement of suit of technologies that will support a comprehensive set of data management, analysis and utilization frameworks in support of both basic research and clinical activities
+**Objective**
+Develop and implement of suit of technologies for basic and clinical activities to support
+
+- a comprehensive set of data management
+
+- analysis
+
+- utilization frameworks
 
 - link between (neuroimaging data, analysis and results)
 
-- improve reproducibility of neuroimaging research
 
-*It will be an end-to-end reproducible analysis framework!*
+
+*It will be an end-to-end reproducible analysis framework towards improving reprodicibility!*
 
 ---
 ### ReproNIm Components
@@ -151,12 +173,13 @@ Building blocks for such frameworks exist due to previous NIH efforts
 
 - Training
 
+<img src="assets/repronim-arch.png" width="60%"/>
 ---
 
 ### Resource Discovery
 - Key aspects of repeatable science - ability to **share** and **locate** data and software
 
-**Requirement**
+**Objective**
 
 - Assists end-user with specific analytic goal to find appropriate data and software which are subsequently submitted to the specified workflow and local/cloud-based execution envrionments.
 
@@ -165,25 +188,31 @@ Building blocks for such frameworks exist due to previous NIH efforts
 **Current state**
 
 - Existing Infastructures do not offer the automation necessary for rapid repeatable study
+
     - Community resource index and search envrionments (e.g. NIF)
+
     - Community data storage and computing resources (e.g., NITRC)
 
 --
 
-- With ever increasing growth of data, software and analysis in neuroimaging, more sophisticated search and discovery algorithms and environment are required !
+Ever increasing growth of neuroimaging data, software and analysis --> more sophisticated search and discovery algorithms and environment are needs to be developed !
 
 ---
 
 ### Resource Discovery - Approach
-- Create an comphrensive environment that integrates NIF data resources and services with NITRC tools registry and computational environment
 
-- Implement search, discovery and publich interfaces through enhancement of neuroimaging semantic framework
+Creates a comprehensive environment that will
+- integrate NIF data resources
+- NITRC tools registry
+- NITRC computational environment
+
+Implement search, discovery and publish interfaces - Neuroimaging semantic framework
 
 - Develop a recommendation system for the appropriate selection of data and tools for subsequent analysis
 
-- **NeuroBLAST**, a search engine that
+**NeuroBLAST**, a search engine that
 
-    - allows users to find matching/similar studies based on a combination of task, analysis, and activation patterns
+- will allow users to find matching/similar studies based on a combination of task, analysis, and activation patterns
 
 - Data discovered will be available for download through DataLad
 
@@ -224,26 +253,29 @@ Challenges in Brain Imaging research reproducibility
 Curation becomes time, consuming, resource intensive, error prone!
 ???
 Notes:
-
+How do you describe your data
+BIDS gives file organization specification
 ---
 ### Data Model, Provenance and Integration
-**Requirement**
+**Objective**
 - To provide a consistent and extensible data model for communicating information in brain imaging, associated software tools, and to provide a set of commonly used reproducible workflows with integrated provenance tracking
 
 ---
 
 ### Data Model, Provenance and Integration - Approach
-- Extending neuroimaging data model (NIDM) to capture different component of research activity (e.g. participants,software, hardware ) and their relation in the model that includes activities that transform data.
+- Extend neuroimaging data model (NIDM)
+    -  to capture different component of research activity (e.g. participants,software, hardware)
+    - capture their relation in the model
 
 - The components of the model
-    - a structured terminology that provides semantic context to experimental data
+    - a structured terminology that provides semantic context to experimental data and workflow specification
     - a formal data model for neuroimaging results generated by brain imaging software (SPM, FSL and FreeSurfer)
 
 - Components being developed - NIDM-Experiment, NIDM-Workflow
 
 ---
 
-[**Neuroimaging Data Model (NIDM)**](http://nidm.nidash.org)
+[**Neuroimaging Data Model (NIDM) Component Layers**](http://nidm.nidash.org)
 
 
 <img src="assets/nidm-model.png" width="85%"/>
@@ -330,8 +362,7 @@ Notes
 
  - To provide the brain imaging community with online training materials based on the concepts and software developed by the center.
 
-- To conduct training workshops to teach the fundamentals of reproducible neuroimaging and to use center resources and tools
-effectively.
+- To conduct training workshops to teach the fundamentals of reproducible neuroimaging and to use center resources and tools effectively.
 
 - To cultivate a clear understanding of the concepts, assumptions, and limitations underlying the reproducible research automation tools.
 
@@ -350,14 +381,17 @@ effectively.
 
 
 ---
-
-### Example
-Simple Workflow demo maybe ?
-
----
 ### Summary
+ReproNIm provides four components
 
-WIP
+- Resourcey Discovery: To search neuroimaging data, software, workflows through **NeuroBLAST**
+
+- Data Model, Provenance and Integration: Describe your data using NIDM and **Brainverse**
+
+- Execution Environments - Automation and tracking of execution environment through **NICEMAN**
+
+- Training - Online training material resources for concepts and technologies for reproducible neuroimaging reseach
+
 Use your tools how you want, but make the results reproducible, open and persistent with ReproNIm: “(Discover, Replicate, Innovate)^Repeat”!
 ---
 class: center, middle
